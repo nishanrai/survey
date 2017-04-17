@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">survey</string>
+    <string-array name="genderlist">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="familymembers">
+        <item>One</item>
+        <item>Two</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+    </string-array>
+    <string
+        name="title">Enter details to send to the Itahari Submetropolitan Municipality:
+    </string>
+    <string
+        name="name">Your Name</string>
+    <string
+        name="caste">Your Caste</string>
+    <string
+        name="feedbackbutton">Submit</string>
 </resources>

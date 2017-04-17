@@ -1,21 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.itsoch.survey.MainActivity">
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/ScrollView01"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:scrollbars="vertical">
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:layout_height="fill_parent">
 
     <TextView
-        android:text="TextView"
+        android:id="@+id/TextViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:text="@string/title"
+        android:textSize="10pt"></TextView>
+
+
+    <EditText
+        android:id="@+id/EditTextName"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:layout_width="fill_parent"></EditText>
+
+    <EditText
+        android:id="@+id/editcaste"
+        android:layout_height="wrap_content"
+        android:hint="@string/caste"
+        android:inputType="textEmailAddress"
+        android:layout_width="fill_parent"></EditText>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:entries="@array/genderlist"></Spinner>
+
+    <TextView
+        android:id="@+id/religion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/textView" />
-</RelativeLayout>
+        android:layout_below="@+id/spinner"
+        android:layout_marginTop="10dp"
+        android:text="1. Religion" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/religion"
+        android:ems="10"
+        android:inputType="textPersonName" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="2. Phone Number" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/phone"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/tapFitted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText5"
+            android:layout_marginTop="26dp"
+            android:text="3. Is tap fitted in the house?" />
+
+        <TextView
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:layout_marginLeft="38dp"
+            android:layout_marginStart="38dp"
+            android:layout_alignBaseline="@+id/tapFitted"
+            android:layout_alignBottom="@+id/tapFitted"
+            android:layout_toRightOf="@+id/tapFitted"
+            android:layout_toEndOf="@+id/tapFitted" />
+
+        <TextView
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:layout_alignBaseline="@+id/yes"
+            android:layout_alignBottom="@+id/yes"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no"
+            android:layout_alignLeft="@+id/no"
+            android:layout_alignStart="@+id/no" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/yes"
+            android:layout_alignRight="@+id/yes"
+            android:layout_alignEnd="@+id/yes" />
+
+        <TextView
+            android:id="@+id/abroad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/checkBox2"
+            android:layout_marginTop="150px"
+            android:text="5. Family members residing abroad?" />
+
+        <EditText
+            android:id="@+id/editAbroad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/abroad"
+            android:layout_marginTop="15px"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editAbroad"
+            android:layout_marginTop="150px"
+            android:text="7. Is WIFI connected in the house?" />
+
+        <TextView
+            android:id="@+id/yes1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:layout_marginLeft="38dp"
+            android:layout_marginStart="38dp"
+            android:layout_alignBaseline="@+id/wifi"
+            android:layout_alignBottom="@+id/wifi"
+            android:layout_toRightOf="@+id/wifi"
+            android:layout_toEndOf="@+id/wifi" />
+
+        <TextView
+            android:id="@+id/no1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:layout_alignBaseline="@+id/yes1"
+            android:layout_alignBottom="@+id/yes1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no1"
+            android:layout_alignLeft="@+id/no1"
+            android:layout_alignStart="@+id/no1" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/yes1"
+            android:layout_alignRight="@+id/yes1"
+            android:layout_alignEnd="@+id/yes1" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100px"
+        android:text="4. Total number of family members?" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_marginTop="15px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/monthlyincome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/editText"
+        android:layout_marginTop="50px"
+        android:text="6. Family monthly income?" />
+
+    <EditText
+        android:id="@+id/editIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/monthlyincome"
+        android:layout_marginTop="15px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+
+
+    <Button
+        android:id="@+id/ButtonSendFeedback"
+        android:layout_height="wrap_content"
+        android:text="@string/feedbackbutton"
+        android:onClick="sendFeedback"
+        android:layout_width="fill_parent"></Button>
+
+</LinearLayout>
+</ScrollView>
