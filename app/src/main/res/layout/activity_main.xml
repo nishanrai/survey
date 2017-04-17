@@ -49,7 +49,7 @@ android:scrollbars="vertical">
         android:text="1. Religion" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editTextreligion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -70,7 +70,7 @@ android:scrollbars="vertical">
             android:text="2. Phone Number" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/editTextphone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -86,7 +86,7 @@ android:scrollbars="vertical">
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/editText5"
+            android:layout_below="@+id/editTextphone"
             android:layout_marginTop="26dp"
             android:text="3. Is tap fitted in the house?" />
 
@@ -201,7 +201,7 @@ android:scrollbars="vertical">
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/familymembers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -211,10 +211,10 @@ android:scrollbars="vertical">
         android:text="4. Total number of family members?" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editfamilymembers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView8"
+        android:layout_alignTop="@+id/familymembers"
         android:layout_marginTop="15px"
         android:ems="10"
         android:inputType="textPersonName" />
@@ -226,7 +226,7 @@ android:scrollbars="vertical">
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/editText"
+        android:layout_alignTop="@+id/editfamilymembers"
         android:layout_marginTop="50px"
         android:text="6. Family monthly income?" />
 
